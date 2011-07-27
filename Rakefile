@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "ascii-table"
   gem.homepage = "http://github.com/magnolia-fan/ascii-table"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{ASCII table generator}
+  gem.description = %Q{Generates oldskool ascii table layouts for your data}
   gem.email = "magnolia_fan@me.com"
   gem.authors = ["Gregory Eremin"]
   # dependencies defined in Gemfile
@@ -38,8 +38,8 @@ end
 
 task :default => :spec
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
+require 'rdoc/task'
+RDoc::Task.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
